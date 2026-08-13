@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>25 Playable Games Catalog | FREE GAMING HUB</title>
+  <meta name="description" content="Browse and play all 25 free HTML5 AAA browser games directly on Free Gaming Hub.">
+  
+  <!-- AAA CSS System -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/games.css">
+  <link rel="stylesheet" href="css/game-screen.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="brand-logo">🎮</span>
+      <span class="brand-name">FREE GAMING HUB</span>
+    </div>
+
+    <ul class="nav-links" id="nav-links-list">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="games.html" class="nav-link active">Games</a></li>
+      <li><a href="leaderboard.html" class="nav-link">Leaderboard</a></li>
+      <li><a href="profile.html" class="nav-link">Profile</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+    </ul>
+
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <div class="volume-panel">
+        <button class="btn-secondary" id="global-sound-btn" style="padding: 0.3rem 0.6rem; font-size: 0.8rem; border: none;">🔊</button>
+        <input type="range" id="global-volume-slider" class="volume-slider" min="0" max="1" step="0.05" value="0.8" title="Volume Slider" />
+      </div>
+      <div id="player-profile-badge" class="player-badge">
+        <span>GUEST</span> 🎮
+      </div>
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </nav>
+
+  <!-- Header Banner -->
+  <section class="hero" style="min-height: 38vh; padding: 3rem 1.5rem;">
+    <div class="hero-glow-bg" style="width: 380px; height: 380px;"></div>
+    <div class="hero-content">
+      <span class="hero-badge">🕹️ 25 PLAYABLE BROWSER GAMES</span>
+      <h1 class="hero-title" style="font-size: clamp(2rem, 5vw, 3.5rem);">FULL GAMES LIBRARY</h1>
+      <p class="hero-subtitle">Filter by category or search by name. Click any game to start playing instantly!</p>
+    </div>
+  </section>
+
+  <!-- Games Section -->
+  <main class="section-container" style="padding-top: 1rem;">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">SEARCH & FILTER</span>
+        <h2 class="section-title">ALL 25 GAMES</h2>
+      </div>
+
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="game-search-input" class="search-input" placeholder="Type game name (e.g. Car Racing, Chess)..." />
+      </div>
+    </div>
+
+    <!-- Category Filters -->
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
+      <button class="btn-secondary cat-filter-btn active" data-category="all" style="padding: 0.5rem 1rem; font-size: 0.85rem;">ALL (25)</button>
+      <button class="btn-secondary cat-filter-btn" data-category="arcade" style="padding: 0.5rem 1rem; font-size: 0.85rem;">ARCADE</button>
+      <button class="btn-secondary cat-filter-btn" data-category="sports" style="padding: 0.5rem 1rem; font-size: 0.85rem;">SPORTS</button>
+      <button class="btn-secondary cat-filter-btn" data-category="puzzle" style="padding: 0.5rem 1rem; font-size: 0.85rem;">PUZZLE</button>
+      <button class="btn-secondary cat-filter-btn" data-category="strategy" style="padding: 0.5rem 1rem; font-size: 0.85rem;">STRATEGY</button>
+      <button class="btn-secondary cat-filter-btn" data-category="action" style="padding: 0.5rem 1rem; font-size: 0.85rem;">ACTION</button>
+      <button class="btn-secondary cat-filter-btn" data-category="racing" style="padding: 0.5rem 1rem; font-size: 0.85rem;">RACING</button>
+      <button class="btn-secondary cat-filter-btn" data-category="classic" style="padding: 0.5rem 1rem; font-size: 0.85rem;">CLASSIC</button>
+    </div>
+
+    <!-- 25 Game Cards Grid -->
+    <div class="games-grid" id="games-catalog-grid">
+      
+      <!-- 1. Snake -->
+      <article class="game-card" data-game="snake" data-title="Snake" data-category="arcade">
+        <div class="game-card-banner"><span class="game-card-icon">🐍</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Snake</span><span style="font-size:0.8rem;color:var(--neon-purple);">ARCADE</span></div>
+          <p class="game-card-desc">Realistic neon snake with glowing eyes, flickering tongue, tapering body scales, and 3D apples!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-snake">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 2. Tic Tac Toe -->
+      <article class="game-card" data-game="tictactoe" data-title="Tic Tac Toe" data-category="strategy">
+        <div class="game-card-banner"><span class="game-card-icon">❌⭕</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Tic Tac Toe</span><span style="font-size:0.8rem;color:var(--neon-blue);">STRATEGY</span></div>
+          <p class="game-card-desc">Unbeatable Minimax AI strategy & 2 Player mode with glowing 3D neon laser symbols!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-tictactoe">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 3. Tetris -->
+      <article class="game-card" data-game="tetris" data-title="Tetris" data-category="puzzle">
+        <div class="game-card-banner"><span class="game-card-icon">🧱</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Tetris</span><span style="font-size:0.8rem;color:var(--neon-pink);">PUZZLE</span></div>
+          <p class="game-card-desc">Stack 3D neon glass tetrominos, clear complete rows with particle explosions, and level up!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-tetris">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 4. Ping Pong -->
+      <article class="game-card" data-game="pingpong" data-title="Ping Pong" data-category="sports">
+        <div class="game-card-banner"><span class="game-card-icon">🏓</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Ping Pong</span><span style="font-size:0.8rem;color:var(--neon-green);">SPORTS</span></div>
+          <p class="game-card-desc">Cyberpunk photon arcade pong! Metallic arc paddles, photon ball speed aura, and particle impact sparks.</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-pingpong">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 5. Space Shooter -->
+      <article class="game-card" data-game="shooter" data-title="Space Shooter" data-category="action">
+        <div class="game-card-banner"><span class="game-card-icon">🚀</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Space Shooter</span><span style="font-size:0.8rem;color:var(--neon-purple);">ACTION</span></div>
+          <p class="game-card-desc">Detailed fighter spaceship with ion thrusters, cockpit glass, plasma lasers, and alien dreadnoughts!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-shooter">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 6. Car Racing -->
+      <article class="game-card" data-game="car-racing" data-title="Car Racing" data-category="racing">
+        <div class="game-card-banner"><span class="game-card-icon">🏎️</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Car Racing</span><span style="font-size:0.8rem;color:var(--neon-blue);">RACING</span></div>
+          <p class="game-card-desc">3-Lane sports car highway racer! Steer between traffic cars, trigger Nitro speed boost, and break records!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-car-racing">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 7. Flappy Bird -->
+      <article class="game-card" data-game="flappy-bird" data-title="Flappy Bird" data-category="arcade">
+        <div class="game-card-banner"><span class="game-card-icon">🐦</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Flappy Bird</span><span style="font-size:0.8rem;color:var(--neon-purple);">ARCADE</span></div>
+          <p class="game-card-desc">Jump impulse gravity physics! Tap spacebar/click to fly through metallic pipe gaps and score points.</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-flappy-bird">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 8. Memory Game -->
+      <article class="game-card" data-game="memory" data-title="Memory Game" data-category="puzzle">
+        <div class="game-card-banner"><span class="game-card-icon">🧠</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Memory Game</span><span style="font-size:0.8rem;color:var(--neon-pink);">PUZZLE</span></div>
+          <p class="game-card-desc">4x4 Cyber card grid! Flip cards, match icon pairs, and test your visual memory brain power.</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-memory">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 9. 2048 -->
+      <article class="game-card" data-game="2048" data-title="2048" data-category="puzzle">
+        <div class="game-card-banner"><span class="game-card-icon">🟡</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>2048</span><span style="font-size:0.8rem;color:var(--neon-pink);">PUZZLE</span></div>
+          <p class="game-card-desc">Slide tiles across the 4x4 matrix grid, merge matching numbers, double your score, and reach 2048!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-2048">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 10. Zombie Shooter -->
+      <article class="game-card" data-game="zombie-shooter" data-title="Zombie Shooter" data-category="action">
+        <div class="game-card-banner"><span class="game-card-icon">🧟</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Zombie Shooter</span><span style="font-size:0.8rem;color:var(--neon-purple);">ACTION</span></div>
+          <p class="game-card-desc">360-Degree arena twin-stick shooter! Aim crosshair, blast zombie hordes, and clear arena waves!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-zombie-shooter">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 11. Chess -->
+      <article class="game-card" data-game="chess" data-title="Chess" data-category="strategy">
+        <div class="game-card-banner"><span class="game-card-icon">♟️</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Chess</span><span style="font-size:0.8rem;color:var(--neon-blue);">STRATEGY</span></div>
+          <p class="game-card-desc">Playable 8x8 Chess with legal moves, capturing, checkmate detection, and Computer AI difficulty levels!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-chess">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 12. Basketball -->
+      <article class="game-card" data-game="basketball" data-title="Basketball" data-category="sports">
+        <div class="game-card-banner"><span class="game-card-icon">🏀</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Basketball</span><span style="font-size:0.8rem;color:var(--neon-green);">SPORTS</span></div>
+          <p class="game-card-desc">Arcade shooting with trajectory arc aiming, power meter, hoop collision physics, and streak combos!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-basketball">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 13. Penalty Shootout -->
+      <article class="game-card" data-game="penalty" data-title="Penalty Shootout" data-category="sports">
+        <div class="game-card-banner"><span class="game-card-icon">⚽</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Penalty Shootout</span><span style="font-size:0.8rem;color:var(--neon-green);">SPORTS</span></div>
+          <p class="game-card-desc">Aim your football shot past the diving goalkeeper AI! 5 penalty rounds to prove your kicker skill.</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-penalty">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 14. 8 Ball Pool -->
+      <article class="game-card" data-game="pool" data-title="8 Ball Pool" data-category="sports">
+        <div class="game-card-banner"><span class="game-card-icon">🎱</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>8 Ball Pool</span><span style="font-size:0.8rem;color:var(--neon-green);">SPORTS</span></div>
+          <p class="game-card-desc">Billiard table physics, cue stick aim line, elastic ball collisions, and 6 pocket detection!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-pool">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 15. Archery -->
+      <article class="game-card" data-game="archery" data-title="Archery" data-category="sports">
+        <div class="game-card-banner"><span class="game-card-icon">🏹</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Archery</span><span style="font-size:0.8rem;color:var(--neon-green);">SPORTS</span></div>
+          <p class="game-card-desc">Pull bow string tension, account for wind drift, and hit the bullseye on moving target rings!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-archery">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 16. Minesweeper -->
+      <article class="game-card" data-game="minesweeper" data-title="Minesweeper" data-category="puzzle">
+        <div class="game-card-banner"><span class="game-card-icon">💣</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Minesweeper</span><span style="font-size:0.8rem;color:var(--neon-pink);">PUZZLE</span></div>
+          <p class="game-card-desc">Classic grid mine clearer! Reveal safe cells, flag hidden mines, and sweep the board clean.</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-minesweeper">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 17. Sudoku -->
+      <article class="game-card" data-game="sudoku" data-title="Sudoku" data-category="puzzle">
+        <div class="game-card-banner"><span class="game-card-icon">🧩</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Sudoku</span><span style="font-size:0.8rem;color:var(--neon-pink);">PUZZLE</span></div>
+          <p class="game-card-desc">9x9 Sudoku master board! On-screen keypad input, error validation, hints, and logic puzzle solving.</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-sudoku">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 18. Solitaire -->
+      <article class="game-card" data-game="solitaire" data-title="Solitaire" data-category="classic">
+        <div class="game-card-banner"><span class="game-card-icon">🃏</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Solitaire</span><span style="font-size:0.8rem;color:var(--neon-blue);">CLASSIC</span></div>
+          <p class="game-card-desc">Classic Klondike Solitaire card game with tableau piles, foundation piles, auto-moves, and score!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-solitaire">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 19. Tower Defense -->
+      <article class="game-card" data-game="tower-defense" data-title="Tower Defense" data-category="strategy">
+        <div class="game-card-banner"><span class="game-card-icon">🏰</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Tower Defense</span><span style="font-size:0.8rem;color:var(--neon-blue);">STRATEGY</span></div>
+          <p class="game-card-desc">Build defensive laser turrets along the path, earn coins, and defend your base against enemy waves!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-tower-defense">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 20. Boxing -->
+      <article class="game-card" data-game="boxing" data-title="Boxing" data-category="sports">
+        <div class="game-card-banner"><span class="game-card-icon">🥊</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Boxing</span><span style="font-size:0.8rem;color:var(--neon-green);">SPORTS</span></div>
+          <p class="game-card-desc">Punch (A), Block (S), and Dodge (D) against the computer boxer in 2D arcade ring matches!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-boxing">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 21. Bike Racing -->
+      <article class="game-card" data-game="bike-racing" data-title="Bike Racing" data-category="racing">
+        <div class="game-card-banner"><span class="game-card-icon">🏍️</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Bike Racing</span><span style="font-size:0.8rem;color:var(--neon-blue);">RACING</span></div>
+          <p class="game-card-desc">High-speed motorcycle highway racer! Steer between traffic cars, use Nitro boost, and break distance records!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-bike-racing">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 22. Stickman Fight -->
+      <article class="game-card" data-game="stickman" data-title="Stickman Fight" data-category="action">
+        <div class="game-card-banner"><span class="game-card-icon">🥷</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Stickman Fight</span><span style="font-size:0.8rem;color:var(--neon-purple);">ACTION</span></div>
+          <p class="game-card-desc">Unleash punch & kick combos against enemy stickmen advancing toward you in 2D skeletal fighter combat!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-stickman">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 23. Zombie Survival -->
+      <article class="game-card" data-game="zombie" data-title="Zombie Survival" data-category="action">
+        <div class="game-card-banner"><span class="game-card-icon">🧟</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Zombie Survival</span><span style="font-size:0.8rem;color:var(--neon-purple);">ACTION</span></div>
+          <p class="game-card-desc">Top-down zombie arena shooter! Blast incoming zombie waves (Wave 1, 2, 3...) and survive the apocalypse!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-zombie">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 24. Asteroid Attack -->
+      <article class="game-card" data-game="asteroid" data-title="Asteroid Attack" data-category="arcade">
+        <div class="game-card-banner"><span class="game-card-icon">🛸</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Asteroid Attack</span><span style="font-size:0.8rem;color:var(--neon-purple);">ARCADE</span></div>
+          <p class="game-card-desc">Classic space vector shooter! Rotate & thrust your starship, blast giant floating space rocks, and split asteroids!</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-asteroid">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+      <!-- 25. Jigsaw Puzzle -->
+      <article class="game-card" data-game="jigsaw" data-title="Jigsaw Puzzle" data-category="puzzle">
+        <div class="game-card-banner"><span class="game-card-icon">🧩</span></div>
+        <div class="game-card-body">
+          <div class="game-card-title"><span>Jigsaw Puzzle</span><span style="font-size:0.8rem;color:var(--neon-pink);">PUZZLE</span></div>
+          <p class="game-card-desc">Swap scrambled cyber image tiles to complete the puzzle! Select between 9 (3x3) and 16 (4x4) piece grids.</p>
+          <div class="game-card-meta"><span class="best-score-badge">BEST SCORE</span><span class="best-score-val" id="best-score-jigsaw">0</span></div>
+          <button class="game-play-btn">PLAY NOW 🎮</button>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Interactive Game Modal Container -->
+  <div class="game-modal" id="game-interactive-modal">
+    <div class="game-modal-content">
+      <div class="game-modal-header">
+        <div class="game-modal-title">
+          <span>🎮</span>
+          <span id="game-modal-title-text">GAME TITLE</span>
+        </div>
+        <button class="modal-close-btn" id="close-game-modal-btn" aria-label="Close game">✖</button>
+      </div>
+      <div class="game-view-area" id="game-view-area"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">FREE GAMING HUB 🎮</div>
+      <p class="footer-text">Built with pure HTML5, CSS3, and Vanilla JavaScript.</p>
+      <p style="color: var(--text-dim); font-size: 0.8rem;">&copy; 2026 Free Gaming Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Core Libraries -->
+  <script src="js/api.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/achievements.js"></script>
+
+  <!-- 25 Game Engine Modules -->
+  <script src="js/games/snake.js"></script>
+  <script src="js/games/tictactoe.js"></script>
+  <script src="js/games/tetris.js"></script>
+  <script src="js/games/pingpong.js"></script>
+  <script src="js/games/shooter.js"></script>
+  <script src="js/games/car-racing.js"></script>
+  <script src="js/games/flappy-bird.js"></script>
+  <script src="js/games/memory.js"></script>
+  <script src="js/games/2048.js"></script>
+  <script src="js/games/zombie-shooter.js"></script>
+  <script src="js/games/chess.js"></script>
+  <script src="js/games/basketball.js"></script>
+  <script src="js/games/penalty.js"></script>
+  <script src="js/games/pool.js"></script>
+  <script src="js/games/archery.js"></script>
+  <script src="js/games/minesweeper.js"></script>
+  <script src="js/games/sudoku.js"></script>
+  <script src="js/games/solitaire.js"></script>
+  <script src="js/games/tower-defense.js"></script>
+  <script src="js/games/boxing.js"></script>
+  <script src="js/games/bike-racing.js"></script>
+  <script src="js/games/stickman.js"></script>
+  <script src="js/games/zombie.js"></script>
+  <script src="js/games/asteroid.js"></script>
+  <script src="js/games/jigsaw.js"></script>
+
+  <!-- AAA App Launcher Controller -->
+  <script src="js/app.js"></script>
+</body>
+</html>

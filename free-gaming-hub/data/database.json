@@ -1,0 +1,19 @@
+{
+  "users": [
+    { "name": "Nodir", "totalScore": 9500, "gamesPlayed": 12, "wins": 8, "losses": 4, "favoriteGame": "Chess" },
+    { "name": "Alex", "totalScore": 8200, "gamesPlayed": 10, "wins": 7, "losses": 3, "favoriteGame": "Basketball" },
+    { "name": "CyberNinja", "totalScore": 14500, "gamesPlayed": 25, "wins": 18, "losses": 7, "favoriteGame": "Space Shooter" }
+  ],
+  "scores": [
+    { "name": "CyberNinja", "game": "Space Shooter", "score": 14500, "date": "2026-08-10" },
+    { "name": "NeonViper", "game": "Tetris", "score": 11200, "date": "2026-08-11" },
+    { "name": "Nodir", "game": "Chess", "score": 9500, "date": "2026-08-13" },
+    { "name": "Alex", "game": "Basketball", "score": 8200, "date": "2026-08-13" },
+    { "name": "ShadowKing", "game": "Snake", "score": 890, "date": "2026-08-12" },
+    { "name": "PixelMaster", "game": "Ping Pong", "score": 25, "date": "2026-08-12" }
+  ],
+  "achievements": {
+    "Nodir": ["first_game", "pts_1000", "chess_master"],
+    "CyberNinja": ["first_game", "pts_1000", "pts_5000", "space_ace"]
+  }
+}

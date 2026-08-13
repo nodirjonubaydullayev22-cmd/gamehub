@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About & Features | FREE GAMING HUB</title>
+  <meta name="description" content="Learn about Free Gaming Hub technology, 25 browser games controls, and features.">
+  
+  <!-- AAA CSS System -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/games.css">
+  <link rel="stylesheet" href="css/game-screen.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="brand-logo">🎮</span>
+      <span class="brand-name">FREE GAMING HUB</span>
+    </div>
+
+    <ul class="nav-links" id="nav-links-list">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="games.html" class="nav-link">Games</a></li>
+      <li><a href="leaderboard.html" class="nav-link">Leaderboard</a></li>
+      <li><a href="profile.html" class="nav-link">Profile</a></li>
+      <li><a href="about.html" class="nav-link active">About</a></li>
+    </ul>
+
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <div class="volume-panel">
+        <button class="btn-secondary" id="global-sound-btn" style="padding: 0.3rem 0.6rem; font-size: 0.8rem; border: none;">🔊</button>
+        <input type="range" id="global-volume-slider" class="volume-slider" min="0" max="1" step="0.05" value="0.8" title="Volume Slider" />
+      </div>
+      <div id="player-profile-badge" class="player-badge">
+        <span>GUEST</span> 🎮
+      </div>
+      <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <section class="hero" style="min-height: 35vh; padding: 3rem 1.5rem;">
+    <div class="hero-glow-bg" style="width: 400px; height: 400px;"></div>
+    <div class="hero-content">
+      <span class="hero-badge">⚡ PLATFORM ARCHITECTURE</span>
+      <h1 class="hero-title" style="font-size: clamp(2.2rem, 5vw, 3.8rem);">ABOUT THE HUB</h1>
+      <p class="hero-subtitle">Discover how Free Gaming Hub brings 25 browser games to life with 100% free web technologies!</p>
+    </div>
+  </section>
+
+  <main class="section-container" style="padding-top: 1rem;">
+    
+    <!-- Platform Overview Cards -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+      <div class="stat-card" style="text-align: left; padding: 2rem;">
+        <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">🚀</span>
+        <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--neon-purple);">ZERO PAYWALL</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">No subscriptions, no microtransactions, and no registration required. Just enter your gamer tag and jump straight into action!</p>
+      </div>
+
+      <div class="stat-card" style="text-align: left; padding: 2rem;">
+        <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">💾</span>
+        <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--neon-blue);">FULL-STACK REST API</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Powered by a Node.js + Express REST API server with automatic client-side LocalStorage sync fallback for offline play.</p>
+      </div>
+
+      <div class="stat-card" style="text-align: left; padding: 2rem;">
+        <span style="font-size: 2.5rem; display: block; margin-bottom: 0.5rem;">📱</span>
+        <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--neon-pink);">100% RESPONSIVE</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Optimized for Desktop, Laptop, Tablet, and Mobile screens with touch control support across all 25 games.</p>
+      </div>
+    </div>
+
+    <!-- Tech Stack Section -->
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">ENGINEERING</span>
+        <h2 class="section-title">TECHNOLOGY STACK</h2>
+      </div>
+    </div>
+
+    <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; margin-bottom: 4rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+        <div>
+          <h4 style="font-family: var(--font-heading); color: var(--neon-purple); margin-bottom: 0.5rem;">HTML5 & CANVAS</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">High-performance 60fps 2D rendering contexts for 25 browser arcade, racing, strategy, and sports engines.</p>
+        </div>
+        <div>
+          <h4 style="font-family: var(--font-heading); color: var(--neon-blue); margin-bottom: 0.5rem;">NODE.JS & EXPRESS</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Express.js REST API backend providing user auth, cloud high score submissions, achievements, and leaderboards.</p>
+        </div>
+        <div>
+          <h4 style="font-family: var(--font-heading); color: var(--neon-pink); margin-bottom: 0.5rem;">WEB AUDIO API</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Synthesized arcade sound effects, ambient background music, and master volume control slider.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">FREE GAMING HUB 🎮</div>
+      <p class="footer-text">Built with pure HTML5, CSS3, Vanilla JavaScript, and Node.js REST API Server.</p>
+      <p style="color: var(--text-dim); font-size: 0.8rem;">&copy; 2026 Free Gaming Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/api.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/achievements.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

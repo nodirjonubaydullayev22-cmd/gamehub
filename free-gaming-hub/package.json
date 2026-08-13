@@ -1,0 +1,24 @@
+{
+  "name": "free-gaming-hub",
+  "version": "2.0.0",
+  "description": "Full-Stack AAA Esports Browser Gaming Platform with 25 Playable Games",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "gaming",
+    "html5-games",
+    "canvas",
+    "esports",
+    "express",
+    "rest-api"
+  ],
+  "author": "Full-Stack Game Developer",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

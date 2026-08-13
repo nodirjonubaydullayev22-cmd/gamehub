@@ -1,0 +1,58 @@
+/* ==========================================================================
+   AAA Game Screen & 3-2-1 Countdown CSS - Free Gaming Hub
+   ========================================================================== */
+
+.game-modal {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(5, 5, 9, 0.94); backdrop-filter: blur(25px);
+  display: flex; justify-content: center; align-items: center; padding: 1.5rem;
+  opacity: 0; pointer-events: none; transition: opacity var(--transition-normal);
+}
+.game-modal.active { opacity: 1; pointer-events: auto; }
+
+.game-modal-content {
+  background: var(--bg-card); border: 1px solid var(--neon-purple);
+  box-shadow: 0 0 50px var(--neon-purple-glow); border-radius: 24px;
+  width: 100%; max-width: 960px; max-height: 96vh;
+  display: flex; flex-direction: column; overflow: hidden; position: relative;
+  transform: scale(0.9); transition: transform var(--transition-bounce);
+}
+.game-modal.active .game-modal-content { transform: scale(1); }
+
+.game-modal-header {
+  padding: 1rem 1.5rem; background: rgba(10, 12, 20, 0.92);
+  border-bottom: 1px solid var(--border-color);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.game-modal-title {
+  font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800;
+  color: var(--neon-purple); display: flex; align-items: center; gap: 0.75rem;
+}
+
+/* Pre-Game 3-2-1 Countdown Overlay */
+.countdown-overlay {
+  position: absolute; inset: 0; z-index: 100;
+  background: rgba(5, 5, 9, 0.95); backdrop-filter: blur(15px);
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+.countdown-number {
+  font-family: var(--font-heading); font-size: 8rem; font-weight: 900;
+  color: var(--neon-blue); text-shadow: 0 0 40px var(--neon-blue);
+  animation: popCount 0.9s ease-out;
+}
+
+@keyframes popCount {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Sound & Volume Control Panel */
+.volume-panel {
+  display: flex; align-items: center; gap: 0.75rem;
+  background: rgba(15, 17, 28, 0.8); padding: 0.4rem 0.8rem;
+  border-radius: 50px; border: 1px solid var(--border-color);
+}
+.volume-slider {
+  width: 80px; accent-color: var(--neon-blue); cursor: pointer;
+}

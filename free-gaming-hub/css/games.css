@@ -1,0 +1,223 @@
+/* ==========================================================================
+   Games Layout & Specialty Board Styles - Free Gaming Hub
+   Styling for Chess, Minesweeper, Sudoku, Solitaire, Jigsaw & Arcade Canvas
+   ========================================================================== */
+
+/* Chess Board */
+.chess-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chess-board {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  border: 3px solid var(--neon-purple);
+  border-radius: 12px;
+  box-shadow: 0 0 30px var(--neon-purple-glow);
+  overflow: hidden;
+}
+
+.chess-square {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.chess-square.light { background: #1e2238; color: #fff; }
+.chess-square.dark { background: #0e1122; color: #fff; }
+.chess-square.selected { background: rgba(0, 240, 255, 0.4) !important; box-shadow: inset 0 0 10px var(--neon-blue); }
+.chess-square.valid-move { background: rgba(168, 85, 247, 0.4) !important; }
+.chess-square.valid-move::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: var(--neon-blue);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Minesweeper Grid */
+.minesweeper-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ms-grid {
+  display: grid;
+  gap: 4px;
+  background: rgba(10, 12, 20, 0.8);
+  padding: 10px;
+  border-radius: 16px;
+  border: 2px solid var(--border-color);
+}
+
+.ms-cell {
+  width: 38px;
+  height: 38px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ms-cell.revealed { background: rgba(255, 255, 255, 0.05); border-color: rgba(255,255,255,0.1); }
+.ms-cell.mine { background: rgba(239, 68, 68, 0.3); border-color: #ef4444; }
+
+/* Sudoku 9x9 */
+.sudoku-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sudoku-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 42px);
+  grid-template-rows: repeat(9, 42px);
+  gap: 2px;
+  background: var(--border-color);
+  border: 3px solid var(--neon-blue);
+  border-radius: 12px;
+  padding: 4px;
+}
+
+.sudoku-cell {
+  background: #0d0e17;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--neon-blue);
+  cursor: pointer;
+}
+
+.sudoku-cell.fixed { color: #fff; background: rgba(255, 255, 255, 0.05); }
+.sudoku-cell.selected { background: rgba(168, 85, 247, 0.3); outline: 2px solid var(--neon-purple); }
+.sudoku-cell.error { color: #ef4444; background: rgba(239, 68, 68, 0.2); }
+
+.sudoku-keypad {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sdk-key {
+  width: 38px;
+  height: 38px;
+  background: var(--bg-card);
+  border: 1px solid var(--neon-purple);
+  border-radius: 8px;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+/* Solitaire Playing Cards */
+.solitaire-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.sol-board {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+.sol-top-row, .sol-tableau {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.card-pile {
+  width: 70px;
+  height: 98px;
+  border: 2px dashed rgba(168, 85, 247, 0.3);
+  border-radius: 8px;
+  position: relative;
+}
+
+.playing-card {
+  width: 70px;
+  height: 98px;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4px 6px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.playing-card.red { color: #dc2626; }
+.playing-card.black { color: #111827; }
+.playing-card.back {
+  background: linear-gradient(135deg, var(--neon-purple), #4c1d95);
+  border-color: var(--neon-purple);
+  color: transparent;
+}
+
+/* Jigsaw Puzzle Grid */
+.jigsaw-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.jigsaw-board {
+  display: grid;
+  gap: 3px;
+  background: rgba(10, 12, 20, 0.9);
+  padding: 8px;
+  border: 2px solid var(--neon-purple);
+  border-radius: 14px;
+}
+
+.jigsaw-tile {
+  background-size: cover;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.jigsaw-tile:hover {
+  transform: scale(1.05);
+  outline: 2px solid var(--neon-blue);
+  z-index: 5;
+}

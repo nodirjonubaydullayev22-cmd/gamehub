@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Responsive & Mobile Virtual Controls CSS - Free Gaming Hub
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; position: absolute; top: 100%; left: 0; width: 100%;
+    background: var(--bg-dark); flex-direction: column; padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .nav-links.active { display: flex; }
+  .mobile-nav-toggle { display: block; }
+  .podium-container { flex-direction: column; align-items: center; }
+  .podium-card { height: auto !important; transform: none !important; order: unset !important; max-width: 100%; }
+  .leaderboard-table { display: block; overflow-x: auto; }
+}

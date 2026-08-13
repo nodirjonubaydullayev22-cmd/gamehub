@@ -1,0 +1,133 @@
+/* ==========================================================================
+   FREE GAMING HUB - AAA Esports Global Design System
+   Theme: Dark Space (#050509) / Neon Purple (#a855f7) & Cyan (#00f0ff)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-dark: #050509;
+  --bg-secondary: #0d0b16;
+  --bg-card: rgba(15, 17, 28, 0.85);
+  --bg-card-hover: rgba(23, 26, 43, 0.95);
+  --bg-glass: rgba(255, 255, 255, 0.03);
+  --bg-input: rgba(10, 12, 20, 0.85);
+
+  --neon-purple: #a855f7;
+  --neon-purple-glow: rgba(168, 85, 247, 0.45);
+  --neon-blue: #00f0ff;
+  --neon-blue-glow: rgba(0, 240, 255, 0.45);
+  --neon-pink: #ff007f;
+  --neon-pink-glow: rgba(255, 0, 127, 0.45);
+  --neon-green: #10b981;
+
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-dim: #6b7280;
+
+  --border-color: rgba(168, 85, 247, 0.25);
+  --border-glow: rgba(168, 85, 247, 0.65);
+
+  --font-heading: 'Orbitron', sans-serif;
+  --font-subheading: 'Rajdhani', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(168, 85, 247, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(0, 240, 255, 0.1) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, var(--bg-secondary) 0%, var(--bg-dark) 100%);
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: rgba(168, 85, 247, 0.4); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--neon-purple); box-shadow: 0 0 10px var(--neon-purple); }
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; outline: none; background: none; }
+
+/* Navigation Header */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  background: rgba(5, 5, 9, 0.88);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand { display: flex; align-items: center; gap: 0.75rem; }
+.brand-logo { font-size: 1.8rem; color: var(--neon-purple); filter: drop-shadow(0 0 10px var(--neon-purple)); }
+.brand-name {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #fff 0%, var(--neon-purple) 60%, var(--neon-blue) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px var(--neon-purple-glow);
+}
+
+.nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+.nav-link {
+  font-family: var(--font-subheading);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: var(--transition-fast);
+}
+
+.nav-link:hover, .nav-link.active { color: #fff; text-shadow: 0 0 10px var(--neon-purple); }
+.nav-link::after {
+  content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+  background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+  box-shadow: 0 0 8px var(--neon-purple); transition: var(--transition-normal);
+}
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+.player-badge {
+  display: flex; align-items: center; gap: 0.5rem;
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem; border-radius: 50px;
+  font-family: var(--font-subheading); font-weight: 700; color: var(--neon-blue);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.1); cursor: pointer; transition: var(--transition-normal);
+}
+.player-badge:hover { border-color: var(--neon-blue); box-shadow: 0 0 15px var(--neon-blue-glow); transform: translateY(-2px); }
+
+.mobile-nav-toggle { display: none; font-size: 1.5rem; color: var(--text-main); }
